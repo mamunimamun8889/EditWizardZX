@@ -685,6 +685,240 @@ overflow: hidden;
       }
     }
 
+    /* =========================
+   PHONK SHOP
+========================= */
+
+#shop {
+  width: 100%;
+  overflow: hidden;
+}
+
+.shop-grid {
+  width: min(1200px, calc(100% - 30px));
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+
+  align-items: stretch;
+}
+
+.shop-card {
+  position: relative;
+
+  padding: 30px 22px;
+
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(35,25,55,0.9),
+      rgba(8,9,14,0.95)
+    );
+
+  text-align: center;
+
+  overflow: hidden;
+
+  transition: 0.35s;
+}
+
+.shop-card:hover {
+  transform: translateY(-8px);
+
+  border-color: #7c4dff;
+
+  box-shadow:
+    0 15px 45px
+    rgba(124,77,255,0.2);
+}
+
+.shop-level {
+  color: #8d6cff;
+
+  font-size: 11px;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 12px;
+}
+
+.shop-card h3 {
+  font-size: 24px;
+
+  margin-bottom: 12px;
+}
+
+.shop-desc {
+  color: #777;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  min-height: 63px;
+}
+
+.price {
+  margin: 20px 0;
+
+  font-size: 36px;
+
+  font-weight: 900;
+
+  background:
+    linear-gradient(
+      90deg,
+      #fff,
+      #8b5cff,
+      #00bfff
+    );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.shop-card ul {
+  list-style: none;
+
+  padding: 0;
+
+  margin: 20px 0;
+
+  text-align: left;
+}
+
+.shop-card li {
+  color: #aaa;
+
+  font-size: 13px;
+
+  padding: 7px 0;
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,0.04);
+}
+
+.buy-btn {
+  display: block;
+
+  margin-top: 22px;
+
+  padding: 13px;
+
+  border-radius: 50px;
+
+  background: #7c4dff;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-weight: bold;
+
+  font-size: 14px;
+
+  box-shadow:
+    0 0 25px
+    rgba(124,77,255,0.25);
+
+  transition: 0.3s;
+}
+
+.buy-btn:hover {
+  transform: translateY(-3px);
+
+  background: #8b5cff;
+}
+
+/* FEATURED */
+
+.featured-shop {
+  border-color: #7c4dff;
+
+  box-shadow:
+    0 0 35px
+    rgba(124,77,255,0.12);
+}
+
+.popular {
+  position: absolute;
+
+  top: 14px;
+  right: -35px;
+
+  width: 130px;
+
+  padding: 5px;
+
+  transform: rotate(45deg);
+
+  background: #7c4dff;
+
+  color: white;
+
+  font-size: 9px;
+
+  font-weight: bold;
+
+  letter-spacing: 1px;
+}
+
+/* PRO */
+
+.pro-shop {
+  border-color: rgba(0,191,255,0.25);
+}
+
+.pro-shop .buy-btn {
+  background:
+    linear-gradient(
+      90deg,
+      #7c4dff,
+      #168cff
+    );
+}
+
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+  .shop-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .shop-grid {
+    width: calc(100% - 30px);
+
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .shop-card {
+    padding: 28px 22px;
+  }
+
+  .shop-desc {
+    min-height: auto;
+  }
+
+}
   </style>
 </head>
 
@@ -893,6 +1127,146 @@ overflow: hidden;
 
   </section>
 
+  <!-- PHONK SHOP -->
+
+<section id="shop">
+
+  <div class="section-heading">
+    <h2>BUY PHONK</h2>
+    <p>Choose your visualizer level and enter the zone.</p>
+  </div>
+
+  <div class="shop-grid">
+
+    <!-- BEGINNER -->
+
+    <div class="shop-card">
+
+      <div class="shop-level">LEVEL 01</div>
+
+      <h3>BEGINNER</h3>
+
+      <p class="shop-desc">
+        Clean and simple phonk visuals for starting creators.
+      </p>
+
+      <div class="price">
+        ₹99
+      </div>
+
+      <ul>
+        <li>✓ Basic Visualizer</li>
+        <li>✓ Beat Sync</li>
+        <li>✓ 1080p Export</li>
+        <li>✓ 1 Visualizer</li>
+      </ul>
+
+      <a href="#" class="buy-btn">
+        BUY NOW
+      </a>
+
+    </div>
+
+
+    <!-- INTERMEDIATE -->
+
+    <div class="shop-card">
+
+      <div class="shop-level">LEVEL 02</div>
+
+      <h3>INTERMEDIATE</h3>
+
+      <p class="shop-desc">
+        More movement, effects and energy for your phonk edits.
+      </p>
+
+      <div class="price">
+        ₹199
+      </div>
+
+      <ul>
+        <li>✓ Advanced Beat Sync</li>
+        <li>✓ Bass Reactive Effects</li>
+        <li>✓ 1080p / 60FPS</li>
+        <li>✓ 3 Visualizers</li>
+      </ul>
+
+      <a href="#" class="buy-btn">
+        BUY NOW
+      </a>
+
+    </div>
+
+
+    <!-- ADVANCED -->
+
+    <div class="shop-card featured-shop">
+
+      <div class="popular">
+        MOST POPULAR
+      </div>
+
+      <div class="shop-level">LEVEL 03</div>
+
+      <h3>ADVANCED</h3>
+
+      <p class="shop-desc">
+        High-energy visuals built for serious phonk creators.
+      </p>
+
+      <div class="price">
+        ₹399
+      </div>
+
+      <ul>
+        <li>✓ Full Beat Reaction</li>
+        <li>✓ Bass + Kick Effects</li>
+        <li>✓ Cinematic Effects</li>
+        <li>✓ 4K Export</li>
+        <li>✓ 5 Visualizers</li>
+      </ul>
+
+      <a href="#" class="buy-btn">
+        BUY NOW
+      </a>
+
+    </div>
+
+
+    <!-- PRO -->
+
+    <div class="shop-card pro-shop">
+
+      <div class="shop-level">LEVEL 04</div>
+
+      <h3>PRO</h3>
+
+      <p class="shop-desc">
+        The complete EditWizardZX experience for professional projects.
+      </p>
+
+      <div class="price">
+        ₹799
+      </div>
+
+      <ul>
+        <li>✓ Pro Audio Reactive Visualizer</li>
+        <li>✓ Advanced Motion Graphics</li>
+        <li>✓ Cinematic Effects</li>
+        <li>✓ 4K / 60FPS</li>
+        <li>✓ Unlimited Visualizers</li>
+        <li>✓ Priority Support</li>
+      </ul>
+
+      <a href="#" class="buy-btn">
+        BUY PRO
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
 
   <!-- ABOUT -->
 
